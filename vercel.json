@@ -6,6 +6,9 @@
    
   ],
   "env": {
-    "mongodb_url": "mongodb://127.0.0.1:27017/test"
+    "mongodb_url": "mongodb://127.0.0.1:27017/test",
+    "CLOUD_NAME":"dtsuedlmt",
+          "API_KEY":564848741899192,
+        "API_SECRET":"8Gb7KF8OYWcAS8DUtoG8bxVSNL8"
   }
 }
