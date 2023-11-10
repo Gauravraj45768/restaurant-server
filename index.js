@@ -18,9 +18,7 @@ app.use(fileUpload({
 const cloudinaryConnect = require("./configs/cloudinary");
 
 const createproduct = require("./controllers/productcontroller");
-app.listen(8000, () => {
-  console.log("Server Establish at 8000 Port");
-});
+
 const db = require("./configs/database");
 db.connect();
 cloudinaryConnect;
@@ -29,4 +27,7 @@ app.post("/uploaditem",createproduct)
 //http://localhost:8000
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/view/createProduct.html"));
+});
+app.listen(8000, () => {
+  console.log("Server Establish at 8000 Port");
 });
