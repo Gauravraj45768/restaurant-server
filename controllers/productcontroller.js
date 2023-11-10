@@ -24,9 +24,7 @@ const createproduct = async (req, res) => {
           rating,
         });
       await newProduct.save();      
-      console.log(newProduct);
-      console.log(file.tempFilePath);
-      console.log(response);
+      
       res.json({
           success: true,
           message: "Image uploaded to Cloudinary",

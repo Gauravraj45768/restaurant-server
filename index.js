@@ -11,10 +11,12 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(fileUpload({
-    useTempFiles : true,
-    tempFileDir : '/tmp/'
-}));;
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 const cloudinaryConnect = require("./configs/cloudinary");
 
 const createproduct = require("./controllers/productcontroller");
@@ -22,7 +24,7 @@ const createproduct = require("./controllers/productcontroller");
 const db = require("./configs/database");
 db.connect();
 cloudinaryConnect;
-app.post("/uploaditem",createproduct)
+app.post("/uploaditem", createproduct);
 
 //http://localhost:8000
 app.get("/", (req, res) => {
