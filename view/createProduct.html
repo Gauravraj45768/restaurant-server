@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1{
+      text-align: center;
+    }
+    /* Add styling for the form container */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style the form labels */
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Style the input fields */
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Style the file input (hidden) */
+    input[type="file"] {
+      display: none;
+    }
+
+    /* Style the custom file input button */
+    label[for="image"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    /* Style the Submit button */
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      form {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>product upload Form</h1>
+  <form action="/uploaditem" method="post" enctype="multipart/form-data">
+  <div>
+   
+    <div>
+      <label for="caption">Caption</label>
+      <input type="text" id="caption" name="caption" />
+    </div>
+    <div>
+      <label for="rating">rating</label>
+      <input type="text" id="rating" name="rating" />
+    </div>
+    <div>
+      <label for="price">Price</label>
+      <input type="text" id="price" name="price" />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" />
+    </div>
+    <div>
+      <label for="image">Image upload</label>
+      <input type="file" id="image" name="image" />
+    </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
