@@ -8,10 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.js",
-      "method": ["GET","POST"],
-      "timeout":30
-    }
+      "method": ["GET","POST"] 
+    },
+    {
+      "src": "/uploaditem",
+      "dest": "/index.js",
+      "method": ["GET","POST"] 
+    }   
+    
   ]
 }
